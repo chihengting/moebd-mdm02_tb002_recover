@@ -67,5 +67,3 @@ python .\trigger_silver.py
 2.  **日期範圍**：執行前請務必檢查腳本頂部的 `$START_DATE`、`$END_DATE` (PowerShell) 以及 `START_DATE`、`END_DATE` (Python) 設定。
 3.  **測試環境**：強烈建議先在 `moebd-bronze-test` 等測試 Bucket 完成驗證後，再將腳本中的變數切換至 `prod` 環境。
 
-## 維護者
-- AI Assistant (Gemini CLI)
