@@ -1,0 +1,18 @@
+# Gemini CLI Context
+GEMINI.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
