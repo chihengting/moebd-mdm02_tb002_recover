@@ -4,3 +4,4 @@ requests>=2.25.0
 pendulum>=2.1.0
 pytz>=2021.1
 google-cloud-storage>=2.0.0
+google-cloud-bigquery>=3.0.0

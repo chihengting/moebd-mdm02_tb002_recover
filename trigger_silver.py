@@ -27,7 +27,7 @@ SA_NAME = "mdm02"                      # 服務分類名稱
 BRONZE_BUCKET = "moebd-bronze-prod"    # 來源 JSON Bucket
 SILVER_BUCKET = "moebd-silver-prod"    # 輸出 Parquet Bucket
 START_DATE = "2026-02-09"              # 開始執行任務的日期
-END_DATE = "2026-02-28"                # 結束執行任務的日期
+END_DATE = "2026-03-01"                # 結束執行任務的日期
 
 # 確保認證程式庫能夠識別當前專案，避免配額 (Quota) 錯誤
 os.environ["GOOGLE_CLOUD_PROJECT"] = PROJECT_ID

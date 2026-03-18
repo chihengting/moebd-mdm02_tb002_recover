@@ -15,7 +15,7 @@ $TEST_PROJECT_ID = "twmoe-bigdata-prod"   # 目標 GCP 專案 ID
 $BRONZE_BUCKET = "moebd-bronze-prod"      # Bronze 區資料存放的 Bucket 名稱
 $SA_NAME = "mdm02"                        # 服務帳號或資料夾分類名稱
 $START_DATE = Get-Date "2026-02-09"       # 補漏任務的開始日期
-$END_DATE = Get-Date "2026-02-28"         # 補漏任務的結束日期
+$END_DATE = Get-Date "2026-03-01"         # 補漏任務的結束日期
 
 # 確保 gcloud CLI 的專案上下文正確，避免將資料複製到錯誤的專案
 Write-Host "正在將 gcloud 專案切換至：$TEST_PROJECT_ID..." -ForegroundColor Cyan
