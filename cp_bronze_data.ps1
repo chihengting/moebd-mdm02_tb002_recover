@@ -14,8 +14,8 @@
 $TEST_PROJECT_ID = "twmoe-bigdata-prod"   # 目標 GCP 專案 ID
 $BRONZE_BUCKET = "moebd-bronze-prod"      # Bronze 區資料存放的 Bucket 名稱
 $SA_NAME = "mdm02"                        # 服務帳號或資料夾分類名稱
-$START_DATE = Get-Date "2026-02-09"       # 補漏任務的開始日期
-$END_DATE = Get-Date "2026-03-01"         # 補漏任務的結束日期
+$START_DATE = Get-Date "2026-02-01"       # 補漏任務的開始日期
+$END_DATE = Get-Date "2026-02-08"         # 補漏任務的結束日期
 
 # 確保 gcloud CLI 的專案上下文正確，避免將資料複製到錯誤的專案
 Write-Host "正在將 gcloud 專案切換至：$TEST_PROJECT_ID..." -ForegroundColor Cyan
@@ -58,7 +58,7 @@ while ($current -le $END_DATE) {
         #   - 如果原始目錄 ($ORIGINAL_DIR) 已存在同名檔案，則跳過該檔案，絕對不覆蓋。
         #   - 只有在原始目錄缺少的檔案才會從修復目錄複製過去。
         Write-Host "[執行] 正在補全缺失的 tb002 檔案至 $ORIGINAL_DIR..." -ForegroundColor Yellow
-        gcloud storage cp "${RECOVERY_DIR}tb002_*.json" "$ORIGINAL_DIR/" --no-clobber
+        gcloud storage cp "${RECOVERY_DIR}tb002_*.json" "$ORIGINAL_DIR/" #--no-clobber
         
     } else {
         # 如果找不到帶有時間戳記的目錄，代表該日期可能沒有對應的修復資料

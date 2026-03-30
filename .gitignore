@@ -16,3 +16,6 @@ desktop.ini
 
 # Logs
 *.log
+
+composer
+moe_sql
